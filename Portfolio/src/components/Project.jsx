@@ -97,13 +97,20 @@ const Project = () => {
                                     ))}
                                 </div>
 
-                                <div className="mt-6 pt-4 border-t border-gray-700">
+                                <div className="mt-6 pt-4 border-t border-gray-700 flex justify-between">
                                     <a
                                         href={project.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-purple-400 hover:text-purple-300 transition-colors text-sm flex items-center gap-1">
                                         View Project <ExternalLink className="w-3 h-3" />
+                                    </a>
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-purple-400 hover:text-purple-300 transition-colors text-sm flex items-center gap-1">
+                                        Live Demo <ExternalLink className="w-3 h-3" />
                                     </a>
                                 </div>
                             </div>

@@ -49,13 +49,23 @@ const HeroSec = () => {
                         >
                             View My Work <ExternalLink className="w-4 h-4" />
                         </a>
-                        <a
-                            href="https://drive.google.com/file/d/1lUBhA9XVcNlwg228eYq7AQ_h-d7is2CB/view?usp=drive_link"
-                            target="_blank" rel="noopener noreferrer"
+                        <button
+                            onClick={() => {
+                                // Open in new tab
+                                window.open("https://drive.google.com/file/d/1lUBhA9XVcNlwg228eYq7AQ_h-d7is2CB/view?usp=drive_link", "_blank");
+
+                                // Trigger download
+                                const link = document.createElement("a");
+                                link.href = "https://drive.google.com/uc?export=download&id=1lUBhA9XVcNlwg228eYq7AQ_h-d7is2CB";
+                                link.download = "Akshay-Shinde-Resume.pdf"; // You can name it anything
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                            }}
                             className="border border-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400/10 transition-all"
                         >
                             My Resume
-                        </a>
+                        </button>
                     </div>
                     <div className="flex justify-center space-x-6">
                         <a
